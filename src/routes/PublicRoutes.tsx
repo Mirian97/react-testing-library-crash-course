@@ -1,7 +1,9 @@
+import BannerLayout from "@/layouts/BannerLayout"
 import ScreenLayout from "@/layouts/ScreenLayout"
+import Followers from "@/screens/Followers"
 import SignUpForm from "@/screens/SignUpForm"
+import Todo from "@/screens/Todo"
 import { createBrowserRouter } from "react-router-dom"
-import Kitten from "../screens/Kitten"
 
 export const PublicRoutes = createBrowserRouter([
 	{
@@ -12,8 +14,22 @@ export const PublicRoutes = createBrowserRouter([
 				element: <SignUpForm />
 			},
 			{
-				path: "kitten",
-				element: <Kitten />
+				path: "todo",
+				element: <BannerLayout />,
+				children: [
+					{
+						path: "",
+						element: <Todo />
+					},
+					{
+						path: "followers",
+						element: <Followers />
+					},
+					{
+						path: "*",
+						element: <Todo />
+					}
+				]
 			},
 			{
 				path: "*",

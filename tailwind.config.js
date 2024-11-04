@@ -12,7 +12,9 @@ export default {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			backgroundImage: {
-				"pink-circles": "url('/images/pink-circles.png')"
+				"pink-circles": "url('/images/pink-circles.png')",
+				mountain:
+					"linear-gradient(to right, rgba(54, 214, 62, 0.794), rgba(53, 201, 157, 0.794), rgba(32, 155, 212, 0.794)),url('/images/mountain.jpg')"
 			},
 			boxShadow: {
 				glass: "0 8px 32px 0 rgba(31,38,135,0.37 )"
